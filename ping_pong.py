@@ -4,7 +4,7 @@ class GameSprite(sprite.Sprite):
 
     def __init__(self, player_image, player_x, player_y, player_speed):
         super().__init__()
-        self.image = transform.scale( image.load(player_image), (70,70))
+        self.image = transform.scale( image.load(player_image), (100,100))
         self.speed = player_speed
         self.rect = self.image.get_rect()
         self.rect.x = player_x
@@ -37,8 +37,6 @@ display.set_caption("Супер мега крутая игра 2к23")
 
 background = transform.scale(image.load("list.jpg"), (700, 500))
 
-sprite_11 = transform.scale( image.load("player1.png"), (10,200))
-sprite_22 = transform.scale( image.load("player2.png"), (10,100))
 sprite_1 = Player(("player1.png"), 0, 420, 10)
 sprite_2 = Player(("player2.png"), 635, 420, 10)
 ball = Player(("ball.png"), 150, 200, 3)
